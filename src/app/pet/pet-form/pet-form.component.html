@@ -1,0 +1,8 @@
+<form class="app-pet-form" style="display: flex; flex-direction: column; width: 300px">
+  <input name="name" [(ngModel)]="name">
+  <select name="type" [(ngModel)]="type">
+    <option value="dog">dog</option>
+    <option value="cat">cat</option>
+  </select>
+  <button (click)="submit()">Submit</button>
+</form>

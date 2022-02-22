@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
+import {PetModule} from "./pet/pet.module";
 
 @NgModule({
   declarations: [
@@ -10,10 +11,12 @@ import {AppComponent} from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PetModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent
+  ]
 })
 export class AppModule {
 }
