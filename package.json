@@ -31,6 +31,7 @@
     "@angular/cli": "~13.2.4",
     "@angular/compiler-cli": "~13.2.0",
     "@briebug/jest-schematic": "^4.0.0",
+    "@cucumber/cucumber": "^7.3.2",
     "@cypress/browserify-preprocessor": "^3.0.2",
     "@cypress/schematic": "^1.6.0",
     "@types/jest": "latest",
