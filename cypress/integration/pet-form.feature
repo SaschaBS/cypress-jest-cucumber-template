@@ -11,5 +11,5 @@ Feature: Check out Pets
 
     When I enter the pet name "Rambo"
     And I select the pet type "cat"
-    And click submit
+    And I click submit
     Then the pet list contains "3" items

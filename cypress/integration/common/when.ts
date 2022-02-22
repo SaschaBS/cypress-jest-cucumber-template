@@ -16,7 +16,7 @@ When(/^I enter the pet name "([^"]*)"$/, function (name: string) {
   cy.get("[data-cy=pet-form]").as('petForm').get('input').type(name);
 });
 
-When(/^click submit$/, function () {
+When(/^I click submit$/, function () {
   cy.get('@petForm').get('button').click();
 });
 
