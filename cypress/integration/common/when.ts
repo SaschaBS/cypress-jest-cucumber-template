@@ -20,6 +20,6 @@ When(/^click submit$/, function () {
   cy.get('@petForm').get('button').click();
 });
 
-When(/^I enter the pet type "(dog|cat)"$/, function (type: PetType) {
+When(/^I select the pet type "(dog|cat)"$/, function (type: PetType) {
   cy.get('@petForm').get('select').select(type);
 });

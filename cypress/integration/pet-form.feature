@@ -10,6 +10,6 @@ Feature: Check out Pets
   Scenario: Add pet
 
     When I enter the pet name "Rambo"
-    And I enter the pet type "cat"
+    And I select the pet type "cat"
     And click submit
     Then the pet list contains "3" items
