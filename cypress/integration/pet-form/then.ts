@@ -9,3 +9,7 @@ Then(/^User sees a rocket$/, function () {
 Then(/^terminal text is (.*)$/, checkTerminalText);
 
 Then(/^the text on "(.*)" is "(.*)"$/, checkElementText);
+
+Then(/^the pet list contains "(\d*)" items$/, function (length: number) {
+  cy.get('[data-cy="pet"]').should('have.length', length)
+});
