@@ -9,7 +9,7 @@ import {PetService} from "./pet/pet.service";
 })
 export class AppComponent implements OnInit {
   title = 'cypress-jest-cucumber-template';
-  petData: Pet[] | undefined;
+  petData: Pet[] = [];
 
 
   constructor(public petService: PetService) {
@@ -21,4 +21,9 @@ export class AppComponent implements OnInit {
   }
 
 
+  submit($event: Pet) {
+    this.petService.submit($event).subscribe(value => {
+      this.petData = [...this.petData, value]
+    })
+  }
 }

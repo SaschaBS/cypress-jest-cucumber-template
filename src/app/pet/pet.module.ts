@@ -4,6 +4,7 @@ import {PetListComponent} from './pet-list/pet-list.component';
 import {PetComponent} from './pet/pet.component';
 import {PetFormComponent} from './pet-form/pet-form.component';
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import {FormsModule} from "@angular/forms";
     PetFormComponent
   ],
   imports: [
+    HttpClientModule,
     CommonModule,
     FormsModule
   ]
