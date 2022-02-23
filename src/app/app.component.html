@@ -304,3 +304,4 @@
 
 <app-pet-list [pets]="petData"></app-pet-list>
 <app-pet-form (formSubmit)="submit($event)"></app-pet-form>
+<span *ngIf="error" class="error">Save failed!</span>

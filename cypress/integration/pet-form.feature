@@ -21,3 +21,10 @@ Feature: Check out Pets
       | "Rambo"  | "cat" | "5"    |
       | "Dude"   | "dog" | "5"    |
       | "Alicia" | "cat" | "5"    |
+
+  @postPet500
+  Scenario: Add pet with server failure
+    When I enter the pet name "Rambo"
+    And I select the pet type "cat"
+    And I click submit
+    Then an error message is shown

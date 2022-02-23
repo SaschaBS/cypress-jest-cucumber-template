@@ -11,3 +11,10 @@ Then(/^the pet with name "([^"]*)" and type "(cat|dog)" is saved$/, function (na
     expect(cy.wrap(request.body).its('type').should('equal', type));
   })
 });
+
+Then(/^an error message is shown$/, function () {
+  cy.wait('@postPet500').then(({response}) => {
+    cy.wrap(response).its('statusCode').should('equal', 500);
+    cy.get('.error').should('exist');
+  })
+});

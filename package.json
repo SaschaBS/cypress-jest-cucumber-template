@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "start": " ng serve --open --proxy-config proxy.conf.json",
     "test": "ng test",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
@@ -21,6 +21,8 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@types/lodash": "^4.14.178",
+    "lodash": "^4.17.21",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -34,13 +36,14 @@
     "@cucumber/cucumber": "^7.3.2",
     "@cypress/browserify-preprocessor": "^3.0.2",
     "@cypress/schematic": "^1.6.0",
+    "@types/faker": "^5.1.0",
     "@types/jest": "latest",
     "@types/node": "^12.11.1",
     "cypress": "latest",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "faker": "^5.1.0",
-    "@types/faker": "^5.1.0",
     "jest": "latest",
+    "json-server": "latest",
     "typescript": "~4.5.2"
   },
   "cypress-cucumber-preprocessor": {

@@ -1,12 +1,7 @@
-import {Before, Given} from "cypress-cucumber-preprocessor/steps";
+import {Given} from "cypress-cucumber-preprocessor/steps";
 import openWebsite from "../support/openWebsite";
 import interceptNumberOfItems from "../support/interceptNumberOfItems";
 
-Before({tags: '@postPet200'}, () => {
-  cy.intercept('POST', /pet/, req => {
-    req.reply({statusCode: 200, body: {...req.body}})
-  }).as('postPet200');
-})
 
 Given(
   /^I open the page "([^"]*)?"$/,
