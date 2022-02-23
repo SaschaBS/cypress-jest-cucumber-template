@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Pet} from "./core/pet.model";
 import {PetService} from "./pet/pet.service";
-import {catchError} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -22,12 +21,14 @@ export class AppComponent implements OnInit {
   }
 
   submit($event: Pet) {
-    this.petService.submit($event).pipe(catchError(() => {
-      this.error = true;
-      return [];
-    })).subscribe(value => {
-      this.error = false;
-      this.petData = [...this.petData, value]
+    this.petService.submit($event).subscribe({
+      next: (value) => {
+        this.error = false;
+        this.petData = [...this.petData, value]
+      },
+      error: () => {
+        this.error = true;
+      }
     })
   }
 }
